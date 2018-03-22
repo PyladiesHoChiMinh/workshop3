@@ -42,7 +42,15 @@ print(vietnam_cities[:-1:])   # Start from the second element from the last
 
 In this session, we will try to show you how to manipulate with elements in python with simple and easy examples.
 
-Imagine that we would like to add another city into `vietnam_cities`, for example, "Vinh".
+Summer is coming. Imagine that we are planning for a `my_cities`, which is a list of cities in a list of `vietnam_cities` you would like to travel in an upcoming trip.
+
+```python
+my_cities = vietnam_cities
+print(my_cities)
+```
+However, there are some missing, and some are not belong to your favorite one. Suppose "Vinh" is a city you would like to visit instead of "Hue".
+
+How would you do to update `my_cities`?
 
 ###### Modifying
 
