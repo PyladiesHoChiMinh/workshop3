@@ -1,22 +1,29 @@
-#### Introducing lists + Working with lists
+### Introducing and wWorking with lists
+---
+Hello and welcome back the third workshop of Pyladies - Ho Chi Minh chapter,
 
-Hello and welcome back the third workshop of `Pyladies`,
+This time we will continue to learn about an introduction of `list` and work on some simple examples of this data structure.
 
-This time we will continue to learn about an introduction of `list` and work on some simple examples of this data structure. For those of you who have not followed us since the first workshop begun, please checkout the last session for some references. Also, the main content of this workshop is mostly adapted from "Python Crash Course: A Hands-on, Project-based Introduction to Programming" by Eric Matthews and "Developer Class" by Google in `python 3`.
+For some of you who have not followed us since the first workshop begun, please checkout the last session for some references.
+
+* Workshop1: Get started with `Jupyterlab` and `git`
+* Workshop2: Variable with `str` and numbers. How to write a good script with `PEP8`
+
+Again, the main content of this workshop is mostly adapted from "Python Crash Course: A Hands-on, Project-based Introduction to Programming" by Eric Matthews and "Developer Class" by Google in `python 3`.
 
 Alright, let us get started!
 
-#### Outline
+### Outline
 0. What is a list? How to access elements in a list
 1. Modifying, adding, inserting/ removing elements
 3. Loop through an entire list with some notices
 4. Make numerical lists with some statistics
 5. Simple statistics with a list of numbers
-6. Define a tuplea and looping through all values in a tuples
+6. Define a tuple and looping through all values in a tuples
 
 
-##### 0. What is a list?
-
+#### 0. What is a list?
+In simple words, `list` is a collection of many items in a order. Every elements can be `str`, `int`, `float`. Open an your `Jupyterlab` and let us know how your list variable looks like.
 ```python
 """
 Example of a list
@@ -24,8 +31,7 @@ Example of a list
 vietnam_cities = ["Hanoi", "Hai Phong", "Hue", "Danang", "Saigon"]
 print(vietnam_cities)
 ```
-
-We could say `list` is a collection of many items in a order. Each of them can be `str`, `int`, `float`.  Open an your `Jupyterlab` and let us know how your list variable looks like. To get an access to an element or a sub-list from an original list, we use `index`, or a position of a list. *Note* Different from other programming language, an `index` of a `list` starts with 0.
+To get an access to an element or a sub-list from an original list, we use `index`, or a position of a list. *Note* Different from other programming language, an `index` of a `list` starts with 0.
 
 Try the following print function and let us know how it works.
 
@@ -38,56 +44,67 @@ print(vietnam_cities[-1])   # The last element
 print(vietnam_cities[::-1])   # Reverse an order
 print(vietnam_cities[:-1:])   # Start from the second element from the last
 ```
-##### 1. Modifying, adding, inserting/ removing elements
+#### 1. Modifying, adding, inserting/ removing elements
 
-In this session, we will try to show you how to manipulate with elements in python with simple and easy examples.
+In this section, we will try to show you how to manipulate with elements in python with simple and easy examples. To begin, let us start with a story.
 
-Summer is coming. Imagine that we are planning for a `my_cities`, which is a list of cities in a list of `vietnam_cities` you would like to travel in an upcoming trip.
+[a picture here]
+
+Summer is coming. Imagine that we are planning for a vacation. Let us say `my_cities` is a list of cities in a list of `vietnam_cities` you would like to travel in an upcoming trip.
+
+First of all, let us create a copy of a list
 
 ```python
 my_cities = vietnam_cities[:]    #Get a copy of vietnam_cities
 print(my_cities)
 ```
-However, there are some missing, and some are not belong to your favorite one. Suppose "Vinh" is a city you would like to visit instead of "Hue".
+**Remember**: Use `[:]` at the end of a variable you want to copy unless any change you update to either `vietnam_cities` or `my_cities` will affect on another.
 
-How would you do to update `my_cities`?
+However, there are some missing, and some are not belong to your favorite one. Suppose "Vinh" is a city you would like to visit instead of "Hue". How would you do to update `my_cities`?
 
-###### Modifying
-
+There are many ways to do. Let us try with some most basic manipulation.
+##### Modifying
+If we want to visit "Vinh" after "Hanoi" ...
 ```python
 vietnam_cities[1] = "Vinh"
 print(vietnam_cities)
 ```
 
-###### Adding
-
+##### Adding
+If we want to visit "Vinh" after arriving "Saigon" (in case still have money and time)
 ```python
 vietnam_cities.append("Vinh")
 print(vietnam_cities)
 ```
 
-###### Inserting/ Removing
+##### Inserting/ Removing
+If we want to visit "Vinh" first ...
 
 ```python
 vietnam_cities.insert(0,"Vinh")
 print(vietnam_cities)
 ```
+
+What if "Vinh" is the last ...
 ```python
 vietnam_cities.insert(-1,"Vinh")
 print(vietnam_cities)
 ```
 
+Ok, we have done a lot planning, there are something wrong, what should we do?
 ```python
 del vietnam_cities[0]
 del vietnam_cities[-1]
 print(vietnam_cities)
 ```
+
+Well, if we would not like to visit "Vinh" anymore ...
 ```python
 vietnam_cities.remove("Vinh")
 print(vietnam_cities)
 ```
 
-##### 5. Simple statistics with a list of numbers
+#### 5. Simple statistics with a list of numbers
 ```python
 visit_days = [1,2,3,4,5]
 min(visit_days)
@@ -100,21 +117,21 @@ triples = [value ** 3 for values in visit_days]
 print(triples)
 ```
 
-```python
+#### 6. Define a tuple and looping through all values in a tuple
 
-```
+`Tuple` is an immutable `list`, which means that you can not change an oder or make any modification. To understand, let us come up with some examples
 
-##### 6. Define a tuple and looping through all values in a tuple
+##### How to initialize a tuple
 ```python
 carried_items = ("t-shirt", "shoes", "pairs of pants", "sunglasses")
 print(carried_items[0])
 print(carried_items[-1])
 ```
-
+Try to update a tuple?
 ```python
 carried_items[1] = "sandals"
 ```
-
+No, it won't work. The only way is that we set up a new value of that tuple.
 
 ```python
 carried_items = ("t-shirt", "shoes", "pairs of pants", "sunglasses")
@@ -125,10 +142,4 @@ carried_items = ("t-shirt", "sandals", "pairs of pants", "sunglasses")
 for item in carried_items:
   print(item)
 ```
-
-
-
-
-More reading:
-- Workshop1: Get started with `Jupyterlab` and `git`
-- Workshop2: Learn about variable and how to write a good work.
+#### Review
