@@ -2,7 +2,7 @@
 
 Hello and welcome back the third workshop of `Pyladies`,
 
-This time we will continue to learn about an introduction of `list` and work on some simple examples of this data structure. For those of you who have not followed us since the first workshop begun, please checkout the last session for some references. Also, the main content of this workshop is mostly adapted from "Python Crash Course: A Hands-on, Project-based Introduction to Programming" by Eric Matthews and "Developer Class" by Google in python 3.
+This time we will continue to learn about an introduction of `list` and work on some simple examples of this data structure. For those of you who have not followed us since the first workshop begun, please checkout the last session for some references. Also, the main content of this workshop is mostly adapted from "Python Crash Course: A Hands-on, Project-based Introduction to Programming" by Eric Matthews and "Developer Class" by Google in `python 3`.
 
 Alright, let us get started!
 
@@ -45,7 +45,7 @@ In this session, we will try to show you how to manipulate with elements in pyth
 Summer is coming. Imagine that we are planning for a `my_cities`, which is a list of cities in a list of `vietnam_cities` you would like to travel in an upcoming trip.
 
 ```python
-my_cities = vietnam_cities
+my_cities = vietnam_cities[:]    #Get a copy of vietnam_cities
 print(my_cities)
 ```
 However, there are some missing, and some are not belong to your favorite one. Suppose "Vinh" is a city you would like to visit instead of "Hue".
@@ -88,7 +88,46 @@ print(vietnam_cities)
 ```
 
 ##### 5. Simple statistics with a list of numbers
-##### 6. Define a tuplea and looping through all values in a tuples
+```python
+visit_days = [1,2,3,4,5]
+min(visit_days)
+max(visit_days)
+sum(visit_days)
+```
+
+```python
+triples = [value ** 3 for values in visit_days]
+print(triples)
+```
+
+```python
+
+```
+
+##### 6. Define a tuple and looping through all values in a tuple
+```python
+carried_items = ("t-shirt", "shoes", "pairs of pants", "sunglasses")
+print(carried_items[0])
+print(carried_items[-1])
+```
+
+```python
+carried_items[1] = "sandals"
+```
+
+
+```python
+carried_items = ("t-shirt", "shoes", "pairs of pants", "sunglasses")
+for item in carried_items:
+  print(item)
+
+carried_items = ("t-shirt", "sandals", "pairs of pants", "sunglasses")
+for item in carried_items:
+  print(item)
+```
+
+
+
 
 More reading:
 - Workshop1: Get started with `Jupyterlab` and `git`
