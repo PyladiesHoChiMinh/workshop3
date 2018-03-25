@@ -23,7 +23,7 @@ Alright, let us get started!
 
 
 #### 0. What is a list?
-In simple words, `list` is a collection of many items in a order. Every elements can be `str`, `int`, `float`. Open an your `Jupyterlab` and let us know how your list variable looks like.
+In simple words, `list` is a collection of many items in a order. Every elements can be `str`, `int`, `float`, and event `list` itself. Open an your `Jupyterlab` and let us know how your list variable looks like.
 ```python
 """
 Example of a list
@@ -143,3 +143,13 @@ for item in carried_items:
   print(item)
 ```
 #### Review
+
+To end this lesson, here are some of methods used for `list` (Adapted from `Google Developer Class in Python`)
+* `list.append(elem)` -- adds a single element to the end of the list. Common error: does not return the new list, just modifies the original.
+* `list.insert(index, elem)` -- inserts the element at the given index, shifting elements to the right.
+* `list.extend(list2)`` adds the elements in list2 to the end of the list. Using + or += on a list is similar to using `extend()`.
+* `list.index(elem)` -- searches for the given element from the start of the list and returns its index. Throws a `ValueError` if the element does not appear (use "in" to check without a ValueError).
+* `list.remove(elem)` -- searches for the first instance of the given element and removes it (throws ValueError if not present)
+* `list.sort()` -- sorts the list in place (does not return it). (The sorted() function shown below is preferred.)
+* `list.reverse()` -- reverses the list in place (does not return it)
+* `list.pop(index)` -- removes and returns the element at the given index. Returns the rightmost element if index is omitted (roughly the opposite of append()).
